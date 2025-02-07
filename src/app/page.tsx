@@ -33,9 +33,9 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative flex flex-col min-h-screen text-slate-800  break-words">
+      <div className="relative flex flex-col min-h-screen text-slate-800  break-words ">
         <Navbar />
-        <main className="mx-7 lg:mx-6 mt-10 flex-grow">
+        <main className="mx-7 lg:mx-6 mt-10 flex-grow ">
           <section className="py-24">
             <Hero>
               <div className="relative z-10 text-center pt-32 ">
