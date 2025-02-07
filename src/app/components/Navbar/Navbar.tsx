@@ -20,7 +20,7 @@ const Navbar = () => {
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex shrink-0 items-center">
                 <Image
-                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                  src="/vercel.svg"
                   alt="Your Company"
                   width={32} // Example width - adjust as needed, consider the aspect ratio of your logo
                   height={32} // Height corresponding to h-8 in Tailwind (adjust if necessary)
