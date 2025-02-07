@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Contact from "./components/Contact/Contact";
 import Experience from "./components/Experience/Experience";
@@ -11,6 +11,12 @@ import Projects from "./components/Projects/Projects";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true); // State to track loading
+
+  const homeRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Simulate content loading (replace with your actual loading logic if needed)
@@ -34,7 +40,13 @@ export default function Home() {
   return (
     <>
       <div className="relative flex flex-col min-h-screen text-slate-800  break-words ">
-        <Navbar />
+        <Navbar
+          homeRef={homeRef} // Pass the refs to Navbar
+          projectsRef={projectsRef}
+          experienceRef={experienceRef}
+          aboutRef={aboutRef}
+          contactRef={contactRef}
+        />
         <main className="mx-7 lg:mx-6 mt-10 flex-grow ">
           <section className="py-24">
             <Hero>
@@ -47,10 +59,10 @@ export default function Home() {
           </section>
           {/* Scroll carrousel right here. */}
           <div className="mt-36 mb-8 w-full text-center ">
-            <Projects />
-            <Experience />
-            <AboutMe />
-            <Contact />
+            <Projects ref={projectsRef} />
+            <Experience ref={experienceRef} />
+            <AboutMe ref={aboutRef} />
+            <Contact ref={contactRef} />
           </div>
         </main>
         <Footer />

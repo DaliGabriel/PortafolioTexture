@@ -1,37 +1,50 @@
 import ProjectCard from "./ProjectCard";
 
-const Projects = () => {
+interface ProjectsProps {
+  ref: React.RefObject<HTMLDivElement | null>;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ ref }) => {
   // Array of project data.  Replace with your actual project information.
   const projects = [
     {
       id: 1,
-      title: "Project 1",
-      description: "A brief description of project 1.",
-      imageUrl: "/image1.jpg", // Replace with your image path
-      demoUrl: "https://example.com/demo1", // Optional: URL to a live demo
-      codeUrl: "https://github.com/yourusername/project1", // Optional: URL to the code repository
+      title: "ImagenProIA",
+      description: "High quality image generation using IA",
+      imageUrl: "/Imagenproia.JPG", // Replace with your image path
+      demoUrl: "https://www.imagenproai.com/", // Optional: URL to a live demo
     },
     {
       id: 2,
-      title: "Project 2",
-      description: "A brief description of project 2.",
-      imageUrl: "/image2.jpg", // Replace with your image path
-      demoUrl: "https://example.com/demo2",
-      codeUrl: "https://github.com/yourusername/project2",
+      title: "México Interactivo(Interactive Map)",
+      description: "An interactive México map to get info about each states",
+      imageUrl: "/MexicoInteractivoMap.JPG", // Replace with your image path
+      demoUrl: "https://www.mexicointeractivo.com/interactive-map",
+      codeUrl: "https://github.com/DaliGabriel/MexicoInteractiveMap",
     },
     {
       id: 3,
-      title: "Project 3",
-      description: "A brief description of project 3.",
-      imageUrl: "/image3.jpg", // Replace with your image path
-      demoUrl: "https://example.com/demo3",
-      codeUrl: "https://github.com/yourusername/project2",
+      title: "México News web app",
+      description: "Top most important mexican news",
+      imageUrl: "/MexicoBlog.JPG", // Replace with your image path
+      demoUrl: "https://www.mexicointeractivo.com/",
+      codeUrl: "https://github.com/DaliGabriel/MexicoInteractiveMap",
+    },
+    {
+      id: 4,
+      title: "Finance App",
+      description: "Simple mobile app to be aware of your finances",
+      imageUrl: "/FinanceAppImageHome.jpeg", // Replace with your image path
+      codeUrl: "https://github.com/DaliGabriel/Finance-app",
     },
     // Add more projects as needed
   ];
 
   return (
-    <section className="py-16 dark:bg-gray-900 dark:text-gray-100 bg-gray-100 mb-1 rounded">
+    <section
+      ref={ref}
+      className="py-16 dark:bg-gray-900 dark:text-gray-100 bg-gray-100 mb-1 rounded"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 dark:text-gray-100">
           My Projects

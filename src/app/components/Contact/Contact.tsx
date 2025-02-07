@@ -1,8 +1,15 @@
 import React from "react";
 
-const Contact = () => {
+interface ContactProps {
+  ref: React.RefObject<HTMLDivElement | null>;
+}
+
+const Contact: React.FC<ContactProps> = ({ ref }) => {
   return (
-    <section className="py-16 dark:bg-gray-900 dark:text-gray-100 bg-gray-100 rounded">
+    <section
+      ref={ref}
+      className="py-16 dark:bg-gray-900 dark:text-gray-100 bg-gray-100 rounded"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 dark:text-gray-100">
           Contact

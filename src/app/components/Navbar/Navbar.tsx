@@ -1,10 +1,59 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Hamburger from "./Hamburger";
 import Image from "next/image";
 
-const Navbar = () => {
+interface NavbarProps {
+  homeRef: React.RefObject<HTMLDivElement | null>;
+  projectsRef: React.RefObject<HTMLDivElement | null>;
+  experienceRef: React.RefObject<HTMLDivElement | null>;
+  aboutRef: React.RefObject<HTMLDivElement | null>;
+  contactRef: React.RefObject<HTMLDivElement | null>;
+}
+
+const Navbar: React.FC<NavbarProps> = ({
+  homeRef,
+  projectsRef,
+  experienceRef,
+  aboutRef,
+  contactRef,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Smooth scrolling function
+  const scrollToSection = (
+    elementRef: React.RefObject<HTMLDivElement | null>
+  ) => {
+    if (elementRef.current) {
+      // Check if elementRef.current is not null
+      window.scrollTo({
+        top: elementRef.current.offsetTop - 64,
+        behavior: "smooth",
+      });
+      setIsMenuOpen(false);
+    } else {
+      // Optionally, you can add a fallback behavior here, like scrolling to the top:
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setIsMenuOpen(false);
+    }
+  };
+
+  // Function to handle scroll and set isMenuOpen to false if it's true
+  const handleScroll = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  // Add scroll event listener when the component mounts
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMenuOpen, handleScroll]); // Depend on isMenuOpen so the listener is updated if isMenuOpen changes
 
   return (
     <>
@@ -29,31 +78,37 @@ const Navbar = () => {
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
-                  <a
-                    href="#"
+                  <button
+                    onClick={() => scrollToSection(homeRef)}
                     className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
                     aria-current="page"
                   >
                     Home
-                  </a>
-                  <a
-                    href="#"
+                  </button>
+                  <button
+                    onClick={() => scrollToSection(projectsRef)}
                     className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >
                     Projects
-                  </a>
-                  <a
-                    href="#"
+                  </button>
+                  <button
+                    onClick={() => scrollToSection(experienceRef)}
+                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >
+                    Experience
+                  </button>
+                  <button
+                    onClick={() => scrollToSection(aboutRef)}
                     className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >
                     About
-                  </a>
-                  <a
-                    href="#"
+                  </button>
+                  <button
+                    onClick={() => scrollToSection(contactRef)}
                     className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >
                     Contact
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -91,37 +146,37 @@ const Navbar = () => {
           id="mobile-menu"
         >
           <div className="space-y-1 px-2 pt-2 pb-3">
-            <a
-              href="#"
+            <button
+              onClick={() => scrollToSection(homeRef)}
               className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
               aria-current="page"
             >
               Home
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() => scrollToSection(projectsRef)}
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Projects
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() => scrollToSection(experienceRef)}
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >
+              Experience
+            </button>
+            <button
+              onClick={() => scrollToSection(aboutRef)}
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               About
-            </a>
-            {/* <a
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >
-              Blog
-            </a> */}
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() => scrollToSection(contactRef)}
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Contact
-            </a>
+            </button>
           </div>
         </div>
       </nav>

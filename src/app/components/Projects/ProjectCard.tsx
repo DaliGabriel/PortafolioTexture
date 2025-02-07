@@ -17,7 +17,7 @@ const ProjectCard = ({
   codeUrl,
 }: ProjectCardProps) => {
   return (
-    <div className="relative group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+    <div className="relative group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out border">
       {/* Image */}
       <Image
         src={imageUrl}
@@ -25,13 +25,13 @@ const ProjectCard = ({
         className="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
         width={500} // Example width - adjust as needed, consider the aspect ratio and w-full
         height={256} // Height corresponding to h-64 in Tailwind (adjust if necessary)
-        objectFit="cover" // Equivalent to object-cover style, prop for <Image>
+        style={{ objectFit: "cover" }} // Equivalent to object-cover style, prop for <Image>
       />
 
       {/* Overlay (initially hidden) */}
-      <div className="absolute inset-0 bg-black bg-opacity-60 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center p-4">
+      <div className="absolute inset-0 bg-black bg-opacity-90 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center p-4">
         <h3 className="text-white text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-300 text-center mb-4">{description}</p>
+        <p className="text-gray-200 text-center mb-4">{description}</p>
 
         {/* Buttons (Demo and Code) */}
         <div className="flex space-x-4">
