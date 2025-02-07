@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Paper Dark Mode Color Palette (Motion.dev Style with Texture) */
+  --background-dark-paper: rgb(
+    15,
+    17,
+    21
+  ); /* Exact background color from Motion.dev */
+  --foreground-light-paper: rgb(245, 245, 245); /* Light text color */
+  --code-block-background: rgb(18, 20, 26); /* Code block background */
+
+  /* Your existing color variables - adjusted for clarity and potential light mode */
+  --background-light: #f9f9f9;
+  --foreground-dark: #333333;
+
+  /* Keeping your original variables, but --background now includes texture */
+  --background: var(--background-dark-paper); /* Base background color */
+  --foreground: var(--foreground-light-paper);
+  --bg: #000000;
+  --clr-1: #00c2ff;
+  --clr-2: #33ff8c;
+  --clr-3: #ffc640;
+  --clr-4: #e54cff;
+
+  --blur: 1rem;
+  --fs: clamp(3rem, 8vw, 7rem);
+  --ls: clamp(-1.75px, -0.25vw, -3.5px);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--background-light); /* Light mode background color */
+    --foreground: var(--foreground-dark); /* Light mode foreground color */
+    background-image: none; /* No texture in light mode (optional) */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/textureBackgroundPaper.png"); /* Path to your texture image (provided image) */
+  background-repeat: repeat; /* Tile the texture */
+  opacity: 0.9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--foreground);
+}
+
+p,
+ul,
+ol,
+li {
+  color: var(--foreground);
+}
+
+/* From Uiverse.io by Cevorob hamburger menu styles */
+.burger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-55deg);
+  top: 23px;
+  left: 6px;
+}
+
+/* Contact me button */
