@@ -24,7 +24,7 @@ export default function Home() {
             </Hero>
           </section>
           {/* Scroll carrousel right here. */}
-          <div className="mt-36 mb-8">
+          <div className="mt-36 mb-8 w-full text-center">
             <Projects />
             <Experience />
             <AboutMe />

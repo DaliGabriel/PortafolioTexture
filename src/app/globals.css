@@ -10,7 +10,6 @@
     21
   ); /* Exact background color from Motion.dev */
   --foreground-light-paper: rgb(245, 245, 245); /* Light text color */
-  --code-block-background: rgb(18, 20, 26); /* Code block background */
 
   /* Your existing color variables - adjusted for clarity and potential light mode */
   --background-light: #f9f9f9;
