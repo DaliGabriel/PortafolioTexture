@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Hamburger from "./Hamburger";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,10 +19,12 @@ const Navbar = () => {
             </div>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex shrink-0 items-center">
-                <img
-                  className="h-8 w-auto"
+                <Image
                   src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
                   alt="Your Company"
+                  width={32} // Example width - adjust as needed, consider the aspect ratio of your logo
+                  height={32} // Height corresponding to h-8 in Tailwind (adjust if necessary)
+                  className="h-8 w-auto" // Keep your Tailwind classes for styling
                 />
               </div>
               <div className="hidden sm:ml-6 sm:block">

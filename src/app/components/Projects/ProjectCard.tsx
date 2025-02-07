@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface ProjectCardProps {
@@ -18,10 +19,13 @@ const ProjectCard = ({
   return (
     <div className="relative group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
       {/* Image */}
-      <img
+      <Image
         src={imageUrl}
         alt={title}
         className="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+        width={500} // Example width - adjust as needed, consider the aspect ratio and w-full
+        height={256} // Height corresponding to h-64 in Tailwind (adjust if necessary)
+        objectFit="cover" // Equivalent to object-cover style, prop for <Image>
       />
 
       {/* Overlay (initially hidden) */}
