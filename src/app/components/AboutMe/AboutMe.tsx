@@ -16,23 +16,23 @@ const AboutMe: React.FC<AboutMeProps> = ({ ref }) => {
         </h2>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg text-gray-800 dark:text-gray-300">
-            Hi, I'm <span className="font-bold">Gabriel Dalí Rangel Ahumada</span>, a passionate **React/Next.js** developer with a strong focus on **web performance, AI-driven solutions, and entrepreneurship**. 
+            Hi, I&apos;m <span className="font-bold">Gabriel Dalí Rangel Ahumada</span>, a passionate <strong>React/Next.js</strong> developer with a strong focus on <strong>web performance, AI-driven solutions, and entrepreneurship</strong>.
           </p>
 
           <p className="mt-4 text-lg text-gray-800 dark:text-gray-300">
-            I have over **5 years of experience** developing modern web applications, optimizing **SEO**, and building **scalable systems**. I thrive at the intersection of **technology and business**, constantly exploring innovative solutions.
+            I have over <strong>5 years of experience</strong> developing modern web applications, optimizing <strong>SEO</strong>, and building <strong>scalable systems</strong>. I thrive at the intersection of <strong>technology and business</strong>, constantly exploring innovative solutions.
           </p>
 
           <p className="mt-4 text-lg text-gray-800 dark:text-gray-300">
-            I'm the creator of <a href="https://www.mexicointeractivo.com" className="text-blue-500 hover:underline">México Interactivo</a>, an interactive map of Mexico, and <a href="https://www.imagenproai.com" className="text-blue-500 hover:underline">ImagenProAI</a>, a professional AI-powered image generator. My mission is to build **products that solve real problems** while learning about **marketing, sales, and financial independence**.
+            I&apos;m the creator of <a href="https://www.mexicointeractivo.com" className="text-blue-500 hover:underline">México Interactivo</a>, an interactive map of Mexico, and <a href="https://www.imagenproai.com" className="text-blue-500 hover:underline">ImagenProAI</a>, a professional AI-powered image generator. My mission is to build <strong>products that solve real problems</strong> while learning about <strong>marketing, sales, and financial independence</strong>.
           </p>
 
           <p className="mt-4 text-lg text-gray-800 dark:text-gray-300">
-            My interests extend beyond coding—I enjoy **business strategy, AI, and content creation**. Currently, I’m working on growing my **social media presence** and sharing my journey in tech and entrepreneurship.
+            My interests extend beyond coding—I enjoy <strong>business strategy, AI, and content creation</strong>. Currently, I&apos;m working on growing my <strong>social media presence</strong> and sharing my journey in tech and entrepreneurship.
           </p>
 
           <p className="mt-4 text-lg text-gray-800 dark:text-gray-300">
-            My long-term goal? To **achieve financial freedom** through technology and innovation while helping others along the way.
+            My long-term goal? To <strong>achieve financial freedom</strong> through technology and innovation while helping others along the way.
           </p>
         </div>
       </div>
