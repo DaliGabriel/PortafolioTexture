@@ -5,12 +5,8 @@ const ContactMeButton = () => {
     const cvUrl =
       "https://raw.githubusercontent.com/DaliGabriel/PortafolioTexture/main/Cv/CvDaliRangel.pdf"; // Direct link to the CV
 
-    const link = document.createElement("a");
-    link.href = cvUrl;
-    link.download = "CvDaliRangel.pdf"; // Suggested file name
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link); // Clean up
+    // Open the file in a new tab (GitHub automatically triggers the download)
+    window.open(cvUrl, "_blank");
   };
 
   return (
