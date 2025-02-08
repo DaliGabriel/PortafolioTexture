@@ -53,7 +53,7 @@ export default function Home() {
               <div className="relative z-10 text-center pt-32 ">
                 <h1 className="text-white text-5xl font-bold">Dalí Rangel</h1>
                 <p className="text-gray-300 text-2xl">Software Frontend Engineer</p>
-                <ContactMeButton />
+                
               </div>
             </Hero>
           </section>
