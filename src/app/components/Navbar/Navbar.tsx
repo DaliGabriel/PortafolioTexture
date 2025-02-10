@@ -75,11 +75,11 @@ const Navbar: React.FC<NavbarProps> = ({
               <div className="flex shrink-0 items-center">
                 {/* Replace with your logo image and solve the warning hight and with directly style??? i know new updated and probably fix is to add az-99 or high thant the other components  */}
                 <Image
-                  src="/vercel.svg"
-                  alt="Your Company"
-                  width={32} // Example width - adjust as needed, consider the aspect ratio of your logo
-                  height={32} // Height corresponding to h-8 in Tailwind (adjust if necessary)
-                  className="h-8 w-auto" // Keep your Tailwind classes for styling
+                  src="/logo.png"
+                  alt="Gabriel Dalí Rangel | Frontend & Full-Stack Developer Logo"
+                  width={32}
+                  height={100}
+                  className="h-8 w-auto"
                 />
               </div>
               <div className="hidden sm:ml-6 sm:block">
