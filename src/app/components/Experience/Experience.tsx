@@ -1,4 +1,5 @@
 import React from "react";
+import ContactMeButton from "../Hero/ContactMeButton";
 
 interface ExperienceProps {
   ref: React.RefObject<HTMLDivElement | null>;
@@ -24,9 +25,18 @@ const Experience: React.FC<ExperienceProps> = ({ ref }) => {
               Guadalajara, Jalisco | January 2024 – Present
             </p>
             <ul className="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300">
-              <li>Developed SEO-optimized, responsive websites using Next.js, increasing organic traffic by 35%.</li>
-              <li>Designed and implemented an AI-powered jewelry personalization application using the Gemini API.</li>
-              <li>Collaborated with design and marketing teams to create tailored e-commerce solutions, enhancing user retention and sales.</li>
+              <li>
+                Developed SEO-optimized, responsive websites using Next.js,
+                increasing organic traffic by 35%.
+              </li>
+              <li>
+                Designed and implemented an AI-powered jewelry personalization
+                application using the Gemini API.
+              </li>
+              <li>
+                Collaborated with design and marketing teams to create tailored
+                e-commerce solutions, enhancing user retention and sales.
+              </li>
             </ul>
           </div>
 
@@ -39,9 +49,18 @@ const Experience: React.FC<ExperienceProps> = ({ ref }) => {
               Guadalajara, Jalisco | October 2022 – December 2024
             </p>
             <ul className="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300">
-              <li>Migrated legacy systems to Next.js, reducing maintenance costs by 20%.</li>
-              <li>Developed custom React.js web applications, boosting workflow efficiency by 30%.</li>
-              <li>Standardized development practices, increasing code reusability and team productivity.</li>
+              <li>
+                Migrated legacy systems to Next.js, reducing maintenance costs
+                by 20%.
+              </li>
+              <li>
+                Developed custom React.js web applications, boosting workflow
+                efficiency by 30%.
+              </li>
+              <li>
+                Standardized development practices, increasing code reusability
+                and team productivity.
+              </li>
             </ul>
           </div>
 
@@ -54,10 +73,23 @@ const Experience: React.FC<ExperienceProps> = ({ ref }) => {
               Guadalajara, Jalisco | September 2021 – October 2022
             </p>
             <ul className="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300">
-              <li>Reduced website load times by 40% by integrating dynamic product listings via external APIs.</li>
-              <li>Automated 70% of customer support queries using Twilio chatbots, improving response times.</li>
-              <li>Enhanced site performance, leading to increased user engagement and repeat visits.</li>
+              <li>
+                Reduced website load times by 40% by integrating dynamic product
+                listings via external APIs.
+              </li>
+              <li>
+                Automated 70% of customer support queries using Twilio chatbots,
+                improving response times.
+              </li>
+              <li>
+                Enhanced site performance, leading to increased user engagement
+                and repeat visits.
+              </li>
             </ul>
+          </div>
+
+          <div>
+            <ContactMeButton />
           </div>
         </div>
       </div>

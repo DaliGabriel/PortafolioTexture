@@ -9,7 +9,7 @@ const ContactMeButton = () => {
       href={cvUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative z-50 pointer-events-auto bg-blue-800 hover:bg-blue-950 text-white font-bold py-2 px-4 border border-blue-950 rounded mt-5 inline-block text-center"
+      className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
     >
       Download CV
     </a>

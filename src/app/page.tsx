@@ -5,8 +5,10 @@ import Contact from "./components/Contact/Contact";
 import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
+import LoadingScreen from "./components/Loading/LoadingScreen";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
+import TypeWriter from "./components/Hero/TypeWriter";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true); // State to track loading
@@ -27,13 +29,7 @@ export default function Home() {
   }, []); // Empty dependency array means this effect runs only once after initial render
 
   if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-screen dark:bg-gray-900 bg-gray-100">
-        <div className="spinner">
-          <div className="spinner1"></div>
-        </div>
-      </div>
-    );
+    return <LoadingScreen />;
   }
 
   return (
@@ -49,10 +45,13 @@ export default function Home() {
         <main className="mx-7 lg:mx-6 mt-10 flex-grow ">
           <section className="py-24">
             <Hero>
-              <div className="relative z-10 text-center pt-32 ">
-                <h1 className="text-white text-5xl font-bold">Dalí Rangel</h1>
-                <p className="text-gray-300 text-2xl">Software Frontend Engineer</p>
-                
+              <div className="relative z-10 text-center pt-40">
+                <h1 className="text-white text-5xl font-bold pb-5">
+                  <TypeWriter text="Dalí Rangel" speed={400} />
+                </h1>
+                <p className="text-gray-300 text-2xl">
+                  Software Frontend Engineer
+                </p>
               </div>
             </Hero>
           </section>

@@ -19,13 +19,18 @@ const Navbar: React.FC<NavbarProps> = ({
   contactRef,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [SelectedSection, setSelectedSection] = useState("Home");
 
   // Smooth scrolling function
   const scrollToSection = (
-    elementRef: React.RefObject<HTMLDivElement | null>
+    elementRef: React.RefObject<HTMLDivElement | null>,
+    section: string
   ) => {
+    setSelectedSection(section);
+
     if (elementRef.current) {
       // Check if elementRef.current is not null
+      console.log(section);
       window.scrollTo({
         top: elementRef.current.offsetTop - 64,
         behavior: "smooth",
@@ -68,6 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({
             </div>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex shrink-0 items-center">
+                {/* Replace with your logo image and solve the warning hight and with directly style??? i know new updated and probably fix is to add az-99 or high thant the other components  */}
                 <Image
                   src="/vercel.svg"
                   alt="Your Company"
@@ -79,40 +85,49 @@ const Navbar: React.FC<NavbarProps> = ({
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
                   <button
-                    onClick={() => scrollToSection(homeRef)}
-                    className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                    aria-current="page"
+                    onClick={() => scrollToSection(homeRef, "Home")}
+                    className={`rounded-md px-3 py-2 text-sm font-medium text-white ${
+                      SelectedSection === "Home" ? "bg-gray-900" : "" // Add bg-gray-900 if SelectedSection is "Home", otherwise no extra class
+                    }`}
                   >
                     Home
                   </button>
                   <button
-                    onClick={() => scrollToSection(projectsRef)}
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    onClick={() => scrollToSection(projectsRef, "Projects")}
+                    className={`rounded-md px-3 py-2 text-sm font-medium text-white ${
+                      SelectedSection === "Projects" ? "bg-gray-900" : "" // Add bg-gray-900 if SelectedSection is "Home", otherwise no extra class
+                    }`}
                   >
                     Projects
                   </button>
                   <button
-                    onClick={() => scrollToSection(experienceRef)}
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    onClick={() => scrollToSection(experienceRef, "Experience")}
+                    className={`rounded-md px-3 py-2 text-sm font-medium text-white ${
+                      SelectedSection === "Experience" ? "bg-gray-900" : "" // Add bg-gray-900 if SelectedSection is "Home", otherwise no extra class
+                    }`}
                   >
                     Experience
                   </button>
                   <button
-                    onClick={() => scrollToSection(aboutRef)}
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    onClick={() => scrollToSection(aboutRef, "About")}
+                    className={`rounded-md px-3 py-2 text-sm font-medium text-white ${
+                      SelectedSection === "About" ? "bg-gray-900" : "" // Add bg-gray-900 if SelectedSection is "Home", otherwise no extra class
+                    }`}
                   >
                     About
                   </button>
                   <button
-                    onClick={() => scrollToSection(contactRef)}
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    onClick={() => scrollToSection(contactRef, "Contact")}
+                    className={`rounded-md px-3 py-2 text-sm font-medium text-white ${
+                      SelectedSection === "Contact" ? "bg-gray-900" : "" // Add bg-gray-900 if SelectedSection is "Home", otherwise no extra class
+                    }`}
                   >
                     Contact
                   </button>
                 </div>
               </div>
             </div>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button
                 type="button"
                 className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
@@ -135,7 +150,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   />
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -147,33 +162,43 @@ const Navbar: React.FC<NavbarProps> = ({
         >
           <div className="space-y-1 px-2 pt-2 pb-3">
             <button
-              onClick={() => scrollToSection(homeRef)}
-              className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+              onClick={() => scrollToSection(homeRef, "Home")}
+              className={`block rounded-md px-3 py-2 text-base font-medium text-white ${
+                SelectedSection === "Home" ? "bg-gray-900" : ""
+              }`}
               aria-current="page"
             >
               Home
             </button>
             <button
-              onClick={() => scrollToSection(projectsRef)}
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              onClick={() => scrollToSection(projectsRef, "Projects")}
+              className={`block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white ${
+                SelectedSection === "Projects" ? "bg-gray-900" : ""
+              }`}
             >
               Projects
             </button>
             <button
-              onClick={() => scrollToSection(experienceRef)}
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              onClick={() => scrollToSection(experienceRef, "Experience")}
+              className={`block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white ${
+                SelectedSection === "Experience" ? "bg-gray-900" : ""
+              }`}
             >
               Experience
             </button>
             <button
-              onClick={() => scrollToSection(aboutRef)}
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              onClick={() => scrollToSection(aboutRef, "About")}
+              className={`block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white ${
+                SelectedSection === "About" ? "bg-gray-900" : ""
+              }`}
             >
               About
             </button>
             <button
-              onClick={() => scrollToSection(contactRef)}
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              onClick={() => scrollToSection(contactRef, "Contact")}
+              className={`block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white ${
+                SelectedSection === "Contact" ? "bg-gray-900" : ""
+              }`}
             >
               Contact
             </button>
