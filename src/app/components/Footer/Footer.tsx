@@ -8,7 +8,7 @@ const Footer = () => {
       <Link href={"https://github.com/DaliGabriel"}>
         <PiGithubLogoLight
           className="text-black dark:text-white text-xl"
-          title="Explore Interactive Map"
+          title="Explore My Github account"
         />
       </Link>
       <Link
@@ -18,7 +18,7 @@ const Footer = () => {
       >
         <PiLinkedinLogoLight
           className="text-black dark:text-white text-2xl"
-          title="Explore Interactive Map"
+          title="Explore My Linkedin Account"
         />
       </Link>
     </footer>
