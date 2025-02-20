@@ -32,6 +32,14 @@ const Projects: React.FC<ProjectsProps> = ({ ref }) => {
     },
     {
       id: 4,
+      title: "Tik tok dashboard",
+      description: "Top most tik tok hashgtag trends",
+      imageUrl: "/tiktokDashboard.JPG", // Replace with your image path
+      demoUrl: "https://tiktoktrends-ui.vercel.app/login",
+      codeUrl: "https://github.com/DaliGabriel/TiktoktrendsUI",
+    },
+    {
+      id: 5,
       title: "Finance App",
       description: "Simple mobile app to be aware of your finances",
       imageUrl: "/FinanceAppImageHome.jpeg", // Replace with your image path

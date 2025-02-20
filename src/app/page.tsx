@@ -35,6 +35,7 @@ export default function Home() {
   return (
     <>
       <div className="relative flex flex-col min-h-screen text-slate-800  break-words ">
+        {isLoading && <h1>Hello</h1>}
         <Navbar
           homeRef={homeRef} // Pass the refs to Navbar
           projectsRef={projectsRef}
@@ -56,10 +57,10 @@ export default function Home() {
             </Hero>
           </section>
           {/* Scroll carrousel right here. */}
-          <div className="mt-36 mb-8 w-full text-center ">
-            <Projects ref={projectsRef} />
+          <div className="mt-36 mb-8 w-full text-center">
             <Experience ref={experienceRef} />
             <AboutMe ref={aboutRef} />
+            <Projects ref={projectsRef} />
             <Contact ref={contactRef} />
           </div>
         </main>
