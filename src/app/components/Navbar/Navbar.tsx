@@ -2,13 +2,15 @@
 import React, { useEffect, useState } from "react";
 import Hamburger from "./Hamburger";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface NavbarProps {
-  homeRef: React.RefObject<HTMLDivElement | null>;
-  projectsRef: React.RefObject<HTMLDivElement | null>;
-  experienceRef: React.RefObject<HTMLDivElement | null>;
-  aboutRef: React.RefObject<HTMLDivElement | null>;
-  contactRef: React.RefObject<HTMLDivElement | null>;
+  homeRef?: React.RefObject<HTMLDivElement | null>;
+  projectsRef?: React.RefObject<HTMLDivElement | null>;
+  experienceRef?: React.RefObject<HTMLDivElement | null>;
+  aboutRef?: React.RefObject<HTMLDivElement | null>;
+  contactRef?: React.RefObject<HTMLDivElement | null>;
+  isOnBlogSection?: boolean;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
@@ -17,18 +19,35 @@ const Navbar: React.FC<NavbarProps> = ({
   experienceRef,
   aboutRef,
   contactRef,
+  isOnBlogSection = false,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [SelectedSection, setSelectedSection] = useState("Home");
 
+  const router = useRouter();
+
   // Smooth scrolling function
   const scrollToSection = (
-    elementRef: React.RefObject<HTMLDivElement | null>,
+    elementRef: React.RefObject<HTMLDivElement | null> | undefined,
     section: string
   ) => {
+    if (section == "Blog") {
+      router.push("/blog");
+      setSelectedSection(section);
+      return;
+    }
+
+    if (isOnBlogSection) {
+      router.push("/");
+      // Optionally, you can add a fallback behavior here, like scrolling to the top:
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setIsMenuOpen(false);
+      setSelectedSection(section);
+    }
+
     setSelectedSection(section);
 
-    if (elementRef.current) {
+    if (elementRef?.current) {
       // Check if elementRef.current is not null
       console.log(section);
       window.scrollTo({
@@ -124,6 +143,14 @@ const Navbar: React.FC<NavbarProps> = ({
                   >
                     Contact
                   </button>
+                  <button
+                    onClick={() => scrollToSection(contactRef, "Blog")}
+                    className={`rounded-md px-3 py-2 text-sm font-medium text-white ${
+                      SelectedSection === "Blog" ? "bg-gray-900" : "" // Add bg-gray-900 if SelectedSection is "Home", otherwise no extra class
+                    }`}
+                  >
+                    Blog
+                  </button>
                 </div>
               </div>
             </div>
@@ -201,6 +228,14 @@ const Navbar: React.FC<NavbarProps> = ({
               }`}
             >
               Contact
+            </button>
+            <button
+              onClick={() => scrollToSection(contactRef, "Blog")}
+              className={`block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white ${
+                SelectedSection === "Blog" ? "bg-gray-900" : ""
+              }`}
+            >
+              Blog
             </button>
           </div>
         </div>
