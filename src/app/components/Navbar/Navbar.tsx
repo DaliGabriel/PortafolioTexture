@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Hamburger from "./Hamburger";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -63,11 +63,11 @@ const Navbar: React.FC<NavbarProps> = ({
   };
 
   // Function to handle scroll and set isMenuOpen to false if it's true
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (isMenuOpen) {
       setIsMenuOpen(false);
     }
-  };
+  }, [isMenuOpen]);
 
   // Add scroll event listener when the component mounts
   useEffect(() => {
@@ -77,7 +77,7 @@ const Navbar: React.FC<NavbarProps> = ({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isMenuOpen, handleScroll]); // Depend on isMenuOpen so the listener is updated if isMenuOpen changes
+  }, [handleScroll]); // Now handleScroll is stable thanks to useCallback
 
   return (
     <>

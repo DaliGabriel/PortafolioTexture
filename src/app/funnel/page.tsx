@@ -2,21 +2,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { 
-  FiArrowRight, 
   FiCheck, 
-  FiStar, 
   FiUsers, 
   FiTrendingUp,
   FiZap,
-  FiShield,
   FiClock,
-  FiDollarSign,
   FiMessageCircle,
-  FiPlay,
-  FiDownload,
-  FiGift,
-  FiAlertCircle,
-  FiTarget,
   FiCheckCircle
 } from "react-icons/fi";
 
@@ -30,10 +21,6 @@ export default function DalíTechFunnels() {
   const whatsappNumber = "+523334010959"; // Replace with actual WhatsApp number
   const whatsappMessage = "¡Hola! Quiero obtener mi plantilla de automatización GRATIS para WhatsApp 🚀";
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`;
-
-  const handleWhatsAppClick = () => {
-    window.open(whatsappLink, '_blank');
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -271,8 +258,8 @@ export default function DalíTechFunnels() {
             className="bg-white/10 backdrop-blur rounded-2xl p-8 mb-8 border border-white/20"
           >
             <p className="text-xl text-blue-200 mb-6">
-              "Pasé de responder manualmente 100+ mensajes de WhatsApp diariamente a tener todo mi funnel funcionando en piloto automático. 
-              Ahora genero leads calificados incluso cuando estoy durmiendo, viajando o pasando tiempo con mi familia."
+              &ldquo;Pasé de responder manualmente 100+ mensajes de WhatsApp diariamente a tener todo mi funnel funcionando en piloto automático. 
+              Ahora genero leads calificados incluso cuando estoy durmiendo, viajando o pasando tiempo con mi familia.&rdquo;
             </p>
             <div className="flex items-center justify-center gap-4">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-2xl font-bold">
