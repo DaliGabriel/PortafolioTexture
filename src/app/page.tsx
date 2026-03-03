@@ -50,7 +50,10 @@ export default function Home() {
                   <TypeWriter text="Dalí Rangel" speed={400} />
                 </h1>
                 <p className="text-gray-300 text-2xl">
-                  Software Frontend Engineer
+                  Senior Full-Stack Engineer · Laravel + AWS
+                </p>
+                <p className="text-gray-400 text-lg mt-2">
+                  Building scalable systems for US startups from Mexico · CST Timezone
                 </p>
               </div>
             </Hero>

@@ -16,23 +16,40 @@ const AboutMe: React.FC<AboutMeProps> = ({ ref }) => {
         </h2>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg text-gray-800 dark:text-gray-300">
-            Hi, I&apos;m <span className="font-bold">Gabriel Dalí Rangel Ahumada</span>, a passionate <strong>React/Next.js</strong> developer with a strong focus on <strong>web performance, AI-driven solutions, and entrepreneurship</strong>.
+            Hi, I&apos;m{" "}
+            <span className="font-bold">Gabriel Dalí Rangel</span> — a Senior
+            Full-Stack Engineer based in <strong>Mexico (CST timezone)</strong>{" "}
+            with 4 years building production systems for fintech and
+            e-commerce.
           </p>
 
           <p className="mt-4 text-lg text-gray-800 dark:text-gray-300">
-            I have over <strong>5 years of experience</strong> developing modern web applications, optimizing <strong>SEO</strong>, and building <strong>scalable systems</strong>. I thrive at the intersection of <strong>technology and business</strong>, constantly exploring innovative solutions.
+            I specialize in <strong>backend architecture with Laravel + PostgreSQL</strong>,{" "}
+            cloud infrastructure on <strong>AWS (EC2, RDS, S3)</strong>, and
+            modern frontends with React + TypeScript + Inertia.js. I keep
+            quality high through <strong>automated testing (90%+ coverage)</strong>{" "}
+            and CI/CD pipelines with GitHub Actions.
           </p>
 
           <p className="mt-4 text-lg text-gray-800 dark:text-gray-300">
-            I&apos;m the creator of <a href="https://www.mexicointeractivo.com" className="text-blue-500 hover:underline">México Interactivo</a>, an interactive map of Mexico, and <a href="https://www.imagenproai.com" className="text-blue-500 hover:underline">ImagenProAI</a>, a professional AI-powered image generator. My mission is to build <strong>products that solve real problems</strong> while learning about <strong>marketing, sales, and financial independence</strong>.
+            At Grupo Axo / Privalia I worked on high-traffic e-commerce
+            backend infrastructure, optimizing MySQL for peak events like Hot
+            Sale and containerizing environments with Docker. At Universidad
+            Cuauhtémoc, I integrated <strong>PayU and Stripe</strong> payment
+            gateways and automated workflows that saved the team 50+ hours per
+            month.
           </p>
 
           <p className="mt-4 text-lg text-gray-800 dark:text-gray-300">
-            My interests extend beyond coding—I enjoy <strong>business strategy, AI, and content creation</strong>. Currently, I&apos;m working on growing my <strong>social media presence</strong> and sharing my journey in tech and entrepreneurship.
+            I help <strong>US companies scale their engineering through nearshoring</strong>,
+            delivering senior-level work with perfect timezone alignment. If
+            you&apos;re looking for a reliable backend engineer who ships
+            clean, tested code and communicates clearly — let&apos;s talk.
           </p>
 
-          <p className="mt-4 text-lg text-gray-800 dark:text-gray-300">
-            My long-term goal? To <strong>achieve financial freedom</strong> through technology and innovation while helping others along the way.
+          <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+            Stack: Laravel · PostgreSQL · MySQL · Redis · AWS · Docker · React ·
+            TypeScript · Inertia.js · Pest · PHPUnit · GitHub Actions
           </p>
         </div>
       </div>

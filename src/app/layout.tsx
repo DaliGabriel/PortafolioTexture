@@ -13,35 +13,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gabriel Dalí Rangel | Frontend & Full-Stack Developer",
+  title: "Gabriel Dalí Rangel | Senior Full-Stack Engineer · Laravel + AWS",
   description:
-    "Experienced React & Next.js developer specializing in AI-powered apps, SEO-optimized websites, and interactive data visualizations. Explore my portfolio showcasing ImagenProAI, México Interactivo, and more.",
+    "Senior Full-Stack Engineer based in Mexico (CST). 4 years building production systems for fintech and e-commerce with Laravel, AWS, PostgreSQL, and React. Open to remote roles with US companies.",
   keywords: [
-    "React.js",
-    "Next.js",
-    "Frontend Developer",
-    "Full-Stack Developer",
-    "AI Applications",
-    "SEO Optimization",
-    "Web Development",
-    "GraphQL",
-    "Node.js",
-    "Replicate API",
-    "Portfolio",
+    "Laravel Developer",
+    "PHP Developer",
+    "Senior Backend Developer",
+    "Full-Stack Engineer",
+    "AWS",
+    "PostgreSQL",
+    "Docker",
+    "Stripe Integration",
+    "PayU Integration",
+    "MySQL Optimization",
+    "Redis",
+    "Remote Backend Developer",
+    "Nearshore Developer Mexico",
     "Gabriel Dalí Rangel",
   ],
   openGraph: {
-    title: "Gabriel Dalí Rangel | Frontend & Full-Stack Developer",
+    title: "Gabriel Dalí Rangel | Senior Full-Stack Engineer · Laravel + AWS",
     description:
-      "Explore my work in AI-driven image generation, interactive maps, and high-performance web applications.",
+      "4 years building scalable Laravel backends and e-commerce systems. AWS, Docker, Stripe/PayU, MySQL optimization. Available for remote work — CST timezone.",
     url: "https://dalirangel.com",
     type: "website",
     images: [
       {
-        url: "https://dalirangel.com/og-image.jpg", // Replace with your OG image URL
+        url: "https://dalirangel.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Gabriel Dalí Rangel Portfolio",
+        alt: "Gabriel Dalí Rangel — Senior Laravel Backend Developer",
       },
     ],
   },

@@ -9,43 +9,43 @@ const Projects: React.FC<ProjectsProps> = ({ ref }) => {
   const projects = [
     {
       id: 1,
-      title: "ImagenProIA",
-      description: "High quality image generation using IA",
-      imageUrl: "/Imagenproia.JPG", // Replace with your image path
-      demoUrl: "https://www.imagenproai.com/", // Optional: URL to a live demo
+      title: "University Payment & Intranet Platform",
+      description:
+        "Full-stack Laravel + React platform managing enrollment, grades, and payments (Stripe & PayU) for a university. Automated workflows saved 50+ manual hours/month.",
+      imageUrl: "/UCGLogo.png",
     },
     {
       id: 2,
-      title: "México Interactivo(Interactive Map)",
-      description: "An interactive México map to get info about each states",
-      imageUrl: "/MexicoInteractivoMap.JPG", // Replace with your image path
+      title: "E-commerce Backend — Privalia / Grupo Axo",
+      description:
+        "Backend engineering for Privalia's high-traffic e-commerce platform. Led Adobe Commerce migration, Docker containerization, and MySQL optimization for Hot Sale peak events.",
+      imageUrl: "/PrivaliaLogo.jpg",
+    },
+    {
+      id: 3,
+      title: "ImagenProIA",
+      description:
+        "AI-powered professional image generator. Prompt engineering + automation pipeline delivering high-quality thematic images at scale.",
+      imageUrl: "/Imagenproia.JPG",
+      demoUrl: "https://www.imagenproai.com/",
+    },
+    {
+      id: 4,
+      title: "México Interactivo",
+      description:
+        "Interactive map and content platform for exploring Mexico's states, history, and culture. Next.js frontend with Firestore backend and SEO-optimized blog.",
+      imageUrl: "/MexicoInteractivoMap.JPG",
       demoUrl: "https://www.mexicointeractivo.com/interactive-map",
       codeUrl: "https://github.com/DaliGabriel/MexicoInteractiveMap",
     },
     {
-      id: 3,
-      title: "México News web app",
-      description: "Top most important mexican news",
-      imageUrl: "/MexicoBlog.JPG", // Replace with your image path
-      demoUrl: "https://www.mexicointeractivo.com/",
-      codeUrl: "https://github.com/DaliGabriel/MexicoInteractiveMap",
-    },
-    {
-      id: 4,
-      title: "Tik tok dashboard",
-      description: "Top most tik tok hashgtag trends",
-      imageUrl: "/tiktokDashboard.JPG", // Replace with your image path
-      demoUrl: "https://tiktoktrends-ui.vercel.app/login",
-      codeUrl: "https://github.com/DaliGabriel/TiktoktrendsUI",
-    },
-    {
       id: 5,
       title: "Finance App",
-      description: "Simple mobile app to be aware of your finances",
-      imageUrl: "/FinanceAppImageHome.jpeg", // Replace with your image path
+      description:
+        "Mobile-first personal finance tracker with expense categorization and automated monthly reporting.",
+      imageUrl: "/FinanceAppImageHome.jpeg",
       codeUrl: "https://github.com/DaliGabriel/Finance-app",
     },
-    // Add more projects as needed
   ];
 
   return (
